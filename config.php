@@ -1,13 +1,13 @@
 <?php
-$host="localhost";
-$username="root";
-$password=""; // $password=''
-$dbname="mms";
+$user = 'root';
+$password = 'root'; // $password = '';
+$server = 'localhost';
+$dbname = 'mms';
 
-try{
-    $pdo = new PDO(dsn: "mysql:host=$host;dbname=$dbname", username: $username, password: $password);
-    $pdo->setAttribute(attribute: PDO::ATTR_ERRMODE, value: PDO::ERRMODE_EXCEPTION);
-}catch(PDOException $e){
-    echo "Error code: " . $e->getMessage();
+try {
+    $conn = new PDO("mysql:host=$server;dbname=$dbname", $user, $password);
+    // echo "Connection successful";
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
 }
 ?>
