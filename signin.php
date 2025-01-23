@@ -1,3 +1,11 @@
+<?php
+include("config.php");
+
+if ($_SERVER)
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
